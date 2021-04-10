@@ -6,5 +6,7 @@ Simply include ccextractor alongside the source directory, then run the project 
 
 Note:
 Just the main() function in main.rs has been written (from ccextractor.c), not all of main.rs has been completed.
+
 So far just lib_ccx.h has been included in the wrapper header. Over time as required, more header files can be included easily in the wrapper.
+
 Right now these bindings don't account for blacklisting/whitelisting functions or variable names. These are to be added in later when required. 
