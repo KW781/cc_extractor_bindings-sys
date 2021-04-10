@@ -4,6 +4,7 @@ use std::mem::{self, MaybeUninit};
 use std::ffi::CString;
 use std::env;
 use std::convert::TryInto;
+use cc_extractor_bindings-sys;
 
 //mod bindings;
 
