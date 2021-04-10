@@ -25,7 +25,7 @@ fn main() {
         let compile_ret = cc_extractor_bindings-sys::parse_parameters(api_options, argc, argv);
 
         for pointer in args {
-            drop(CString::from_raw(ptr));
+            drop(CString::from_raw(pointer));
         }
 
         if compile_ret == EXIT_NO_INPUT_FILES as i32 {
