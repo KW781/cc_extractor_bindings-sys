@@ -34,7 +34,7 @@ fn main() {
         }
         else if compile_ret == EXIT_WITH_HELP as i32{
             process:exit(EXIT_OK);
-        }s
+        }
         else if compile_ret != EXIT_OK as i32{
             process::exit(compile_ret);
         }
