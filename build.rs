@@ -7,9 +7,9 @@ use std::path::PathBuf;
 use std::env;
 
 fn main() {
-    let lib = cmake::build("ccextractor/src"); //build lib_ccx using cmake
+    let dst = cmake::build("ccextractor/src"); //build lib_ccx using cmake
 
-    println!("cargo:rustc-link-search=native={}/lib", lib.display());
+    println!("cargo:rustc-link-search=native={}/lib", dst.display());
     println!("cargo:rustc-link-lib=static=ccx");
     println!("cargo:return-if-changed=wrapper.h"); //re-generate the bindings if there are any changes made to the wrapper file
 
