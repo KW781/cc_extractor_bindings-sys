@@ -1,4 +1,4 @@
-//currently, there is no accounting for whitelisting/blacklisting of particular functions/variables
+//currently, there is no accounting for whitelisting/blacklisting of particular functions/variables, except blacklisting print_usage()
 //this is likely to be implemented later on during GSoC
 
 extern crate cmake;
@@ -15,6 +15,7 @@ fn main() {
 
     let mut bindings = bindgen::Builder::default()
         .header("wrapper.h")
+        .blacklist_function("print_usage");
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
         .expect("Unable to generate bindings");
