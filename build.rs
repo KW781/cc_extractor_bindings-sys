@@ -15,7 +15,7 @@ fn main() {
 
     let mut bindings = bindgen::Builder::default()
         .header("wrapper.h")
-        .blacklist_function("print_usage");
+        .blacklist_function("print_usage"); //this function has been ported to Rust, meaning we don't need bindings to it
         .parse_callbacks(Box::new(bindgen::CargoCallbacks))
         .generate()
         .expect("Unable to generate bindings");
