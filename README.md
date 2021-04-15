@@ -9,4 +9,4 @@ Just the main() function in main.rs has been written (from ccextractor.c), not a
 
 So far just lib_ccx.h, list.h and ccx_common_options.h has been included in the wrapper header. Over time as required, more header files can be included easily in the wrapper.
 
-Right now these bindings don't account for blacklisting/whitelisting functions or variable names. These are to be added in later when required. 
+Right now these bindings don't account for blacklisting/whitelisting functions or variable names, except for print_usage() (because print_usage() has been ported). These are to be added in later when required. 
